@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "applied-science-journey"
+version = "0.0.1"
+description = "Learning repo for DS → Applied Scientist transition"
+requires-python = ">=3.12"
+dependencies = ["pytest==8.2.0"]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+# Enable Ruff’s “lint + formatter” mode so it formats like Black:
+extend-select = ["F", "E", "I", "UP"]
+unsafe-fixes = true
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+# Treat absence of type hints as an error (good habit):
+check_untyped_defs = true
+
+

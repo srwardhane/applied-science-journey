@@ -15,3 +15,11 @@ repos:
     hooks:
       - id: mypy
         args: ["--check-untyped-defs"]
+
+  - repo: local                # ← new list item, indented two spaces
+    hooks:                     # ← aligned under “repo:”
+      - id: pytest             # ← each hook indented two more spaces
+        name: pytest
+        entry: pytest
+        language: system
+        types: [python]
