@@ -9,6 +9,7 @@ jobs:
       - uses: actions/checkout@v4  # step 1: pull your code
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}  # step 2: same Python as you use locally
+      - run: pip install -e .
       - run: pip install ruff mypy black pytest
       - run: ruff check .
       - run: mypy --check-untyped-defs .
