@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: applied-science-journey
+Version: 0.0.1
+Summary: Learning repo for DS → Applied Scientist transition
+Requires-Python: >=3.12
+Requires-Dist: pytest==8.2.0
